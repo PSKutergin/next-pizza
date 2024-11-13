@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
 
       <TopBar />
 
-      <Container className="pb-14">
+      <Container className="mt-10 pb-14">
         <div className="flex gap-[60px]">
           {/*Filters*/}
           <div className="w-[250px]">
