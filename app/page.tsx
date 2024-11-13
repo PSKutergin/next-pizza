@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       <h1>Home</h1>
-      <Button variant={"outline"}>Button</Button>
     </>
   );
 }
