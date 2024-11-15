@@ -60,6 +60,42 @@ export const Filters: React.FC<FiltersProps> = ({ className }) => {
             value: "6",
             text: "Курица",
           },
+          {
+            value: "7",
+            text: "Курица",
+          },
+          {
+            value: "8",
+            text: "Курица",
+          },
+          {
+            value: "9",
+            text: "Курица",
+          },
+          {
+            value: "10",
+            text: "Курица",
+          },
+          {
+            value: "11",
+            text: "Курица",
+          },
+          {
+            value: "12",
+            text: "Курица",
+          },
+          {
+            value: "13",
+            text: "Курица",
+          },
+          {
+            value: "14",
+            text: "Курица",
+          },
+          {
+            value: "15",
+            text: "Курица",
+          },
         ]}
         defaultItems={[
           {
