@@ -3,7 +3,7 @@ import {
   TopBar,
   Title,
   Filters,
-  ProductCard,
+  ProductsGroupList,
 } from "@/components/shared";
 import React from "react";
 
@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
       <TopBar />
 
       <Container className="mt-10 pb-14">
-        <div className="flex gap-[60px]">
+        <div className="flex gap-[80px]">
           {/*Filters*/}
           <div className="w-[250px]">
             <Filters />
@@ -26,11 +26,88 @@ export default function Home(): JSX.Element {
           {/*Products*/}
           <div className="flex-1">
             <div className="flex flex-col gap-16">
-              <ProductCard
-                id={1}
-                name="Пицца 1"
-                price={100}
-                imageUrl="/images/pizza.png"
+              <ProductsGroupList
+                title="Пиццы"
+                items={[
+                  {
+                    id: 1,
+                    name: "Пицца 1",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                  {
+                    id: 2,
+                    name: "Пицца 2",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                  {
+                    id: 3,
+                    name: "Пицца 3",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                ]}
+                categoryId={1}
+                className="mt-10"
+                listClassName="gap-10"
+              />
+
+              <ProductsGroupList
+                title="Комбо"
+                items={[
+                  {
+                    id: 1,
+                    name: "Пицца 1",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                  {
+                    id: 2,
+                    name: "Пицца 2",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                  {
+                    id: 3,
+                    name: "Пицца 3",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                ]}
+                categoryId={2}
+                className="mt-10"
+                listClassName="gap-10"
               />
             </div>
           </div>
