@@ -1,37 +1,40 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
+import { useCategoryStore } from "@/store/category";
 
 interface CategoriesProps {
   className?: string;
 }
 
-const cats: string[] = [
-  "Пиццы",
-  "Комбо",
-  "Закуски",
-  "Коктейли",
-  "Кофе",
-  "Напитки",
-  "Десерты",
+const items: { id: number; name: string }[] = [
+  { id: 1, name: "Пиццы" },
+  { id: 2, name: "Комбо" },
+  { id: 3, name: "Закуски" },
+  { id: 4, name: "Коктейли" },
+  { id: 5, name: "Кофе" },
+  { id: 6, name: "Напитки" },
+  { id: 7, name: "Десерты" },
 ];
-const activeIndex: number = 0;
 
 export const Categories: React.FC<CategoriesProps> = ({ className }) => {
+  const activeCategoryId = useCategoryStore((state) => state.activeId);
+
   return (
     <div
       className={cn("inline-flex gap-1 bg-gray-50 p-1 rounded-2xl", className)}
     >
-      {cats.map((cat, index) => (
+      {items.map((category) => (
         <a
-          key={index}
+          key={category.id}
           className={cn(
             "flex items-center font-bold h-11 rounded-2xl px-5",
-            index === activeIndex &&
-              "bg-white text-primary shadow-md shadow-gray-200"
+            activeCategoryId === category.id &&
+              "bg-white shadow-md shadow-gray-200 text-primary"
           )}
+          href={`/#${category.name}`}
         >
-          <button>{cat}</button>
+          <button>{category.name}</button>
         </a>
       ))}
     </div>

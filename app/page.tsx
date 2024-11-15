@@ -62,6 +62,28 @@ export default function Home(): JSX.Element {
                       },
                     ],
                   },
+                  {
+                    id: 4,
+                    name: "Пицца 4",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
+                  {
+                    id: 5,
+                    name: "Пицца 5",
+                    imageUrl:
+                      "https://static.pizzasushiwok.ru/images/menu_new/279-300.jpg",
+                    items: [
+                      {
+                        price: 100,
+                      },
+                    ],
+                  },
                 ]}
                 categoryId={1}
                 className="mt-10"
