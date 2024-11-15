@@ -1,4 +1,10 @@
-import { Container, TopBar, Title, Filters } from "@/components/shared";
+import {
+  Container,
+  TopBar,
+  Title,
+  Filters,
+  ProductCard,
+} from "@/components/shared";
 import React from "react";
 
 export default function Home(): JSX.Element {
@@ -19,7 +25,14 @@ export default function Home(): JSX.Element {
 
           {/*Products*/}
           <div className="flex-1">
-            <div className="flex flex-col gap-16">Список товаров</div>
+            <div className="flex flex-col gap-16">
+              <ProductCard
+                id={1}
+                name="Пицца 1"
+                price={100}
+                imageUrl="/images/pizza.png"
+              />
+            </div>
           </div>
         </div>
       </Container>
